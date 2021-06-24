@@ -1,3 +1,8 @@
+Did not follow the encouragement of going ahead with frontend task of using javascript n stuff,
+As learnling completly new language was more difficult.
+DiD my best  in programing but still it could ofc be improved but time did not permit and que did not ask.
+Also explation in this file is not that great as done in hurry. But I could personally explain all things.
+
 # Bank Mangement 
 > OOPusing C++
 showing bankmangement using classes
@@ -39,3 +44,5 @@ rtype//Return Type //function to return type of account
 array of object has been made
 
 good use of programming knowledge made for better interaction 
+
+ by Sanchay Mahat0
