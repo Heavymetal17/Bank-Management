@@ -1,10 +1,10 @@
-Did not follow the encouragement of going ahead with frontend task of using javascript n stuff,
+Did not follow the encouragement (as suggested )of going ahead with frontend task of using javascript n stuff,
 As learnling completly new language was more difficult.
 DiD my best  in programing but still it could ofc be improved but time did not permit and que did not ask.
 Also explation in this file is not that great as done in hurry. But I could personally explain all things.
 
 # Bank Mangement 
-> OOPusing C++
+> OOP using C++(https://github.com/kossiitkgp/KOSS-Selection-Tasks/blob/master/backend/bank-management.md)
 showing bankmangement using classes
 ## class Account
  ### Attribute
