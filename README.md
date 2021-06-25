@@ -45,4 +45,4 @@ array of object has been made
 
 good use of programming knowledge made for better interaction 
 
- by Sanchay Mahat0
+ by Sanchay Mahato
