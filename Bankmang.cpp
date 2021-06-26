@@ -14,6 +14,7 @@ void line (void)
 {
     for(int i=0;i<41;i++)
      cout<<"--";
+     cout<<endl;
 }
 class Account
 {
@@ -37,14 +38,16 @@ class Account
 
 };
 
-
+Account a[100],acc;
     void Account :: createacc(void)
     {
        cout<<"\nCreate Account:-";
-       cout<<"\nEnter Account Holder Name :\n"; gets(name);//cin>>name;
+       cout<<"\nEnter Account Holder Name :\n"; //gets(name);
+       cin>>name;
       //cin.getline(name,80);
       cout<<"\nEnter the Account Number :";           cin>>accountno;
-       cout<<"\nEnter the type of account :"; gets(type); // cin>>type;
+       cout<<"\nEnter the type of account :";// gets(type); 
+       cin>>type;
       //cin.getline(type,25);
        cout<<"\n Enter the money to be deposited :";   cin>>balance;
        
@@ -63,7 +66,7 @@ class Account
     void Account :: modify(void)
     {   int x;
         cout<<"\nEnter the S.no. of option you want to modify";
-        cout<<"\n1.Account Holder's Name\n2.Account Type\n3.Balance";
+        cout<<"\n1.Account Holder's Name\n2.Account Type\n3.Balance\n";
         cin>>x;
         switch (x)
         {
@@ -115,13 +118,13 @@ class Account
     }
     void Account :: report(void)
     {
-      cout<<setw(49)<<"\n\nACCOUNT REPORT\n";
+      cout<<setw(49)<<"\n\nAll ACCOUNTS REPORT\n";
 line();
 line();
 cout<<setw(2)<<"S.no."<<setw(15)<<"Account Number"<<setw(12)<<"Name"<<setw(12)<<"Balance"<<setw(12)<<"Account Type\n";
     for(int i=0;i<N;i++)
      {
-    cout<<setw(2)<<i+1<<setw(15)<<accountno<<setw(12)<<name<<setw(12)<<balance<<setw(12)<<type<<endl;
+    cout<<setw(2)<<i+1<<setw(15)<<a[i].accountno<<setw(12)<<a[i].name<<setw(12)<<a[i].balance<<setw(12)<<a[i].type<<endl;
      line();
 
      }
@@ -139,7 +142,7 @@ cout<<setw(2)<<"S.no."<<setw(15)<<"Account Number"<<setw(12)<<"Name"<<setw(12)<<
         return type[10];
     }
 
-Account a[100];
+
 
 void menu(int i)
 {  int x;
@@ -149,7 +152,7 @@ void menu(int i)
     cout<<"1.modify\n";
     cout<<"2.Deposit money\n";
     cout<<"3.WIthdraw Money\n";
-    cout<<"4.Give Account Report \n";
+    cout<<"4.Show Account details \n";
   //cout<<"5.accno\n";
     cout<<"5.View Balance\n";
     cout<<"6.View Account Type\n";
@@ -167,13 +170,13 @@ void menu(int i)
         a[i].withdraw();
         break;
     case 4:
-        a[i].report();
+        a[i].showacc();
         break;
     case 5:
-        a[i].rbal();
+        cout<<a[i].rbal()<<endl;
         break;
     case 6:
-        a[i].rtype();
+        cout<<a[i].rtype()<<endl;
         break;
 
     default:cout<<"Invalid entry\n";
@@ -220,9 +223,9 @@ int main()
      break;
 
     case 2:
-     { for(int i=0;i<N;i++)
+     {// for(int i=0;i<N;i++)
       {
-        a[i].showacc();
+        acc.report();
       }
      }
      break;
