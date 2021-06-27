@@ -9,6 +9,11 @@
 
 using namespace std;
 
+void clear (void){
+    int c = 0;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
+
 int n,N=0;
 void line (void)
 {
@@ -40,14 +45,17 @@ class Account
 
 Account a[100],acc;
     void Account :: createacc(void)
-    {
+    {  clear();
        cout<<"\nCreate Account:-";
        cout<<"\nEnter Account Holder Name :\n"; //gets(name);
-       cin>>name;
+       fgets(name,50, stdin);
+       //cin>>name;
       //cin.getline(name,80);
       cout<<"\nEnter the Account Number :";           cin>>accountno;
+        clear();
        cout<<"\nEnter the type of account :";// gets(type); 
-       cin>>type;
+       fgets(type, 30, stdin);
+       //cin>>type;
       //cin.getline(type,25);
        cout<<"\n Enter the money to be deposited :";   cin>>balance;
        
@@ -121,10 +129,10 @@ Account a[100],acc;
       cout<<setw(49)<<"\n\nAll ACCOUNTS REPORT\n";
 line();
 line();
-cout<<setw(2)<<"S.no."<<setw(15)<<"Account Number"<<setw(12)<<"Name"<<setw(12)<<"Balance"<<setw(12)<<"Account Type\n";
+cout<<setw(2)<<"S.no."<<setw(20)<<"Account Number"<<setw(12)<<"Name"<<setw(25)<<"Balance"<<setw(24)<<"Account Type\n";
     for(int i=0;i<N;i++)
      {
-    cout<<setw(2)<<i+1<<setw(15)<<a[i].accountno<<setw(12)<<a[i].name<<setw(12)<<a[i].balance<<setw(12)<<a[i].type<<endl;
+    cout<<setw(2)<<i+1<<setw(10)<<a[i].accountno<<setw(30)<<a[i].name<<setw(12)<<a[i].balance<<setw(12)<<a[i].type<<endl;
      line();
 
      }
